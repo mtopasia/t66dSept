@@ -1,14 +1,29 @@
 package first;
 
+import java.io.StringWriter;
 import java.util.HashMap;
+
+import org.json.simple.JSONObject;
+
 
 public class Kordamine {
 
 	public static void main(String[] args) {
+	    
 		Kordamine kordamine = new Kordamine();
 		System.out.println(kordamine.hasUpperBegin("Mati"));
 		System.out.println(kordamine.hawMoreUpperLettersThanLower("MaTT"));
 		
+	    JSONObject obj = new JSONObject();
+
+	      obj.put("name", "foo");
+	      obj.put("num", new Integer(100));
+	      obj.put("balance", new Double(1000.21));
+	      obj.put("is_vip", new Boolean(true));
+	}
+	public String printJsonElement(JSONObject obj, String str) {
+		
+		return (String) obj.get(str);
 	}
 	
 	public boolean isWordNumber(String str, int num) {

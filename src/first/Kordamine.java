@@ -29,7 +29,7 @@ public class Kordamine {
 	public boolean isWordNumber(String str, int num) {
 		HashMap<Integer, String> hm = new HashMap<Integer, String>();
 		
-		// Put elements to the map
+		// Put elements to the map132356
 		hm.put(1, "üks");
 		hm.put(2, "kaks");
 		hm.put(3, "kolm");

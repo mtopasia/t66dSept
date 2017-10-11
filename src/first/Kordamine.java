@@ -1,6 +1,8 @@
 package first;
 
 import java.io.StringWriter;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 
 import org.json.simple.JSONObject;
@@ -20,7 +22,19 @@ public class Kordamine {
 	      obj.put("num", new Integer(100));
 	      obj.put("balance", new Double(1000.21));
 	      obj.put("is_vip", new Boolean(true));
+
+		
+	} 
+	
+	public boolean isWordInArrayList(String str, ArrayList<String> al) {
+		for (int i = 0; i < al.size(); i++) {
+			if (al.get(i).equals(str)) {
+				return true;
+			}
+		}
+		return false;
 	}
+	
 	public String printJsonElement(JSONObject obj, String str) {
 		
 		return (String) obj.get(str);
